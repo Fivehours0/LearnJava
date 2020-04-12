@@ -1,2 +1,2 @@
-# leetcode_code
-to save some codes
+# java
+code
