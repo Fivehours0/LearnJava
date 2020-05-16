@@ -1,7 +1,7 @@
 package genericity;
 import java.util.List;
 import java.util.ArrayList;
-// 泛型不可以在静态方法中使用，因为泛型是在
+// 泛型不可以在静态方法中使用，因为泛型需要进行实例化确定类型
 
 public class Genericity{
     public static void main(String[] args) {

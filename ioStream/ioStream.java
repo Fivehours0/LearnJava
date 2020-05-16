@@ -9,7 +9,7 @@ import java.io.IOException;
  * Flie对象可以作为参数传递给流的构造函数 File类常见的构造方法 public File(String pathname)
  */
 public class ioStream {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         // 使用双斜杠或者反斜杠
         String pathname = "D:\\java\\content.txt";
         File f = new File(pathname);
@@ -56,20 +56,20 @@ public class ioStream {
         ioStream recurrenceTest = new ioStream();
         File recuFile = new File("D:\\java");
         recurrenceTest.test(recuFile);
-    }   
+    }
 
     /**
      * 递归遍历文件
      * 遍历d盘下的java文件，把java文件下的所有的目录与文件全部遍历出来，不论层级有多深，都全部遍历出来
      */
-    public void test(File f){
-        if(f.isFile()) {
+    public void test(File f) {
+        if (f.isFile()) {
             System.out.println(f.getAbsolutePath() + "  " + "是文件");
         } else {
             System.out.println(f.getAbsolutePath() + "  " + "是文件夹");
             File[] files = f.listFiles();
-            if(files != null && files.length > 0) {
-                for(File fi: files) {
+            if (files != null && files.length > 0) {
+                for (File fi : files) {
                     test(fi);
                 }
             }
@@ -80,8 +80,8 @@ public class ioStream {
 /**
  * 文件流
  */
-class FileInput{
-    public static void main(String[] arg){
-        FileInputStream in = new FileInputStream(file)
+class FileInput {
+    public static void main(String[] arg) {
+        // FileInputStream in = new FileInputStream(file)
     }
 }
