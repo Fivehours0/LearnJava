@@ -10,34 +10,34 @@ public class SynchronizedTest implements Runnable {
     private static int i = 0;
     private static final SynchronizedTest instance = new SynchronizedTest();
 
-//    /**
-//     * 指定加锁对象
-//     */
-//    @Override
-//    public void run() {
-//        for (int j = 0; j < 10000; j++) {
-//            synchronized (instance) {
-//                i++;
-//            }
-//        }
-//    }
-
-
-
     /**
-     * 用于实例方法, 也就是说，在调用实例方法的时候，需要获取实例的锁
-     * notice: 不要把 synchronized 加到 run 上了
+     * 指定加锁对象
      */
-    private synchronized void increase () {
-        i++;
-    }
-
     @Override
     public void run() {
         for (int j = 0; j < 10000; j++) {
-            increase();
+            synchronized (instance) {
+                i++;
+            }
         }
     }
+
+
+
+//    /**
+//     * 用于实例方法, 也就是说，在调用实例方法的时候，需要获取实例的锁
+//     * notice: 不要把 synchronized 加到 run 上了
+//     */
+//    private synchronized void increase () {
+//        i++;
+//    }
+//
+//    @Override
+//    public void run() {
+//        for (int j = 0; j < 10000; j++) {
+//            increase();
+//        }
+//    }
 
 
 //    /**
@@ -60,6 +60,8 @@ public class SynchronizedTest implements Runnable {
     public static void main(String[] args) throws InterruptedException {
         Thread t1 = new Thread(instance);
         Thread t2 = new Thread(instance);
+//        Thread t1 = new Thread(new SynchronizedTest());
+//        Thread t2 = new Thread(new SynchronizedTest());
         t1.start();t2.start();
         t1.join();t2.join();
         System.out.println(i);
