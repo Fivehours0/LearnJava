@@ -65,7 +65,7 @@ class ExamThread extends Thread {
     }
 
     public static void main(final String[] args) {
-        ExamThread examThread = new ExamThread();
+        Thread examThread = new ExamThread();
         examThread.start();
         System.out.println("1");
         System.out.println("2");
