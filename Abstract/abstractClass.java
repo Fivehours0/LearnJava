@@ -1,4 +1,4 @@
-package p4;
+package Abstract;
 /**
  * 抽象类
  * 一个抽象类中可以定义构造器，但是抽象类不可被实例化，可以在子类中使用方法进行初始化
@@ -56,38 +56,6 @@ abstract class Bird extends abstractClass{
     public abstract void test();
 }
 
-
-/**
- * 模板方法设计模式(本质上是抽象方法, 区别是将抽象方法加入到了实例方法getTime中)
- * 例如：去银行办业务，银行给我们提供了一个模板就是：先取号，排对，办理业务（核心部分我们子类完成），给客服人员评分，完毕。
- 这里办理业务是属于子类来完成的，其他的取号，排队，评分则是一个模板。
- */
-abstract class Template{
-    public final void getTime(){
-        long start = System.currentTimeMillis();
-        code();
-        long end = System.currentTimeMillis();
-        System.out.println(end-start);
-    }
-    public abstract void code();
-}
-
-class SubTemplate extends Template {
-    @Override
-    public void code() {
-        for(int i=0; i<10000; i++){
-            if(i>9990){
-                System.out.println(i);
-            }
-        }
-    }
-
-    public static void main(String[] args) {
-        SubTemplate subTemplate = new SubTemplate();
-        subTemplate.getTime();
-    }
-}
-
 /**
  * 接口，用来抽象方法的
  * 子类继承父类，只能继承一个父类
@@ -120,48 +88,14 @@ class TestInterface implements Interface1, Interface2{
     }
 }
 // 一个类既可以继承，也可以实现接口
-class Test2 extends Template implements Interface1{
+class Test2 extends TestInterface implements Interface1{
 
     @Override
     public void test() {
 
     }
-
-    @Override
-    public void code() {
-
-    }
 }
 
-/**
- * 工厂模式
- * 通过工厂把new对象给隔离，通过产品的接口可以接受不同实际产品的实现类实例的
- * 类名的改变不影响其他合作开发人员的编程
- */
-
- /**
-  * 内部类
-  */
-class InClass{
-    private int age = 10;
-    private String name = "duzhihui";
-    class In{ // 相当于是一个类变量了
-        private int height = 100;
-        private void showInfo(){
-            System.out.println(InClass.this.age); //访问外部类的数据
-            System.out.println(this.height); // 访问内部类自己的数据
-        }
-    }
-    public void showInClassInfo(){
-        In in = new In();
-        in.showInfo(); // 访问类变量的方法
-    }
-
-    public static void main(String[] args) {
-        InClass inClass = new InClass();
-        inClass.showInClassInfo();
-    }
-}
 /**
  * 可以使用内部类变相的实现多重继承
  */
