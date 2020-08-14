@@ -63,31 +63,6 @@ class TreeSET{
     }
 }
 
-class Person implements Comparator<Person>{
-    String name;
-    int age;
-    public Person(){
-
-    }
-
-    public Person(String name, int age){
-        this.name = name;
-        this.age = age;
-    }
-
-    @Override
-    public int compare(Person o1, Person o2) {
-        // TODO Auto-generated method stub
-        if(o1.age > o2.age) {
-            return 1;
-        } else if(o1.age < o2.age) {
-            return -1;
-        } else {
-            return 0;
-        }
-    }
-}
-
 class ArrayLIST{
     public static void main(String[] args) {
         ArrayList<String> arrayList = new ArrayList<String>();
@@ -104,8 +79,10 @@ class ArrayLIST{
         System.out.println(arrayList.indexOf("e")); // 获取指定元素第一次出现的下标
         System.out.println(arrayList.lastIndexOf("e")); // 获取指定元素最后一次出现的下标
         arrayList.remove("du"); // 内部进行了重写，可以选择根据内容或者下标进行数据的移除
+
         arrayList.set(2, "u"); // 修改指定下标位置的元素值
         List<String> arrayList2 = arrayList.subList(1, 3); // 切片
+
         System.out.println(arrayList2);
         arrayList.size(); // 返回大小
     }
@@ -127,6 +104,7 @@ class HashMAP{
         hashmap.containsKey("e"); // 是否包含这个key
         hashmap.containsValue(2); // 是否包含这个value
         // hashmap.clear(); // 清空map
+
         Set<String> keys = hashmap.keySet(); // key集合
         hashmap.values(); // 返回值
         
@@ -143,37 +121,3 @@ class HashMAP{
     }
 }
 
-class CollectionUsing{
-    public static void main(String[] args) {
-        ArrayList<Integer> arrayList = new ArrayList<Integer>();
-        arrayList.add(2);
-        arrayList.add(1);
-        System.out.println(arrayList);
-        // Collections.reverse(arrayList); // 反转
-        // Collections.shuffle(arrayList); // 随机排列
-        // Collections.sort(arrayList); // 自然排序升序
-        // Collections.swap(arrayList, 0, 1); // 交换0，1两个元素
-        // System.out.println(Collections.max(arrayList)); // 返回最大值
-        // System.out.println(Collections.min(arrayList)); // 返回最小值
-        // System.out.println(Collections.frequency(arrayList, 1)); // 统计出现的次数
-
-        System.out.println(arrayList);
-
-        /**
-         * sort还可以传入comparator达成自然排序的目的
-         */
-        Person p1 = new Person("du", 18);
-        Person p2 = new Person("li", 19);
-        ArrayList<Person> arrayList2 = new ArrayList<>();
-        arrayList2.add(p1);
-        arrayList2.add(p2);
-        Collections.sort(arrayList2, new Person());
-        for(Person p: arrayList2){
-            System.out.println(p.name + p.age);
-        }
-        Person pmax = Collections.max(arrayList2, new Person());
-        System.out.println(pmax.name + pmax.age); // 对对象进行操作的max
-
-
-    }
-}
