@@ -41,7 +41,7 @@ class ConditionTest implements Runnable {
     public void run() {
         try {
             lock.lock();
-            condition.await();
+            condition.await(); // 进入等待，并且释放重入锁
             System.out.println("continue run");
         } catch (InterruptedException e) {
             e.printStackTrace();
