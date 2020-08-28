@@ -94,43 +94,6 @@ class staticUsing{
     }
 }
 
-/**
- * 单例设计
- */
-class Single {
-    // public Single(){
-    //     // 假设构造中要执行1000行代码，要占用很大的资源，耗时很长(10秒)
-    //     // 每一次new Single对象需要10秒，运行1000行代码
-    //     // 像这种情况，就适合使用单例模式，只new一次对象，以后一直就使用这个对象
-    // }
-    /**
-     * 懒汉式和饿汉式的区别，就是什么时候new这个对象
-     * 懒汉式，是在第一次有人调用getInstance方法时来new对象，以后再有人调用getInstance方法直接就返回之前第一次new好的对象
-     * 饿汉式，实在类加载之后，没有人调用时，就new好的对象，以后有人调用getInstance方法就直接返回new好的对象
-     * 饿汉式浪费内存。暂时懒汉式还存在线程安全问题，讲到多线程时，可修复。
-     */
-    /*饿汉式单例
-    private Single(){
-
-    }
-    private static Single single = new Single();
-    public static Single getInstance(){ // 因为不能创建实例化对象，所以要将方法设置为类方法
-        return single;
-    }*/
-
-    /*懒汉式单例
-    private Single(){
-
-    }
-    private static Single single = null;
-    public static Single getInstance(){ // 因为不能创建实例化对象，所以要将方法设置为类方法
-        if(single==null){
-            single = new Single();
-        }
-        return single;
-    }*/
-}
-
 public class Inherit {
     public static void main(String[] arg){
         double area;
