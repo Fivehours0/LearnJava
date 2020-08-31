@@ -1,7 +1,5 @@
 package multiThreading;
 
-import com.sun.tools.javac.Main;
-
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
@@ -32,15 +30,15 @@ public class ForkTest extends RecursiveTask<Long> {
             ArrayList<ForkTest> saveTask = new ArrayList<>();
             long step = diff / 10;
             for (int i = 0; i < 10; i++) {
-                long startPos = start + i * step; // 子任务的开始数
-                long endPos = Math.min(start + (i + 1) * step, end); // 子任务的结束数
+                long startPos = start + i * step; // 子任务的开始位置
+                long endPos = Math.min(start + (i + 1) * step, end); // 子任务的结束位置
                 ForkTest task = new ForkTest(startPos, endPos);
                 saveTask.add(task);
-                task.fork();
+                task.fork(); // 任务提交
             }
 
             for (ForkTest f: saveTask) {
-                sum += f.join();
+                sum += f.join(); // return the computed result
             }
         }
         return sum;
