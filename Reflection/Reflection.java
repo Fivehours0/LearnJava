@@ -12,7 +12,7 @@ import java.util.Arrays;
  */
 
 class Person {
-    String name;
+    private String name;
     int age;
     public  Person () {
 
