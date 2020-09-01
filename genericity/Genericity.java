@@ -73,9 +73,14 @@ class FuncGenerity{
             System.out.println(t1);
         }
     }
+
+    public <T extends Comparable<T>> void min (T a, T b) { // 限定了参数a，b必须为实现了Comparable接口的变量
+
+    }
     
     public static void main(String[] args) {
-        System.out.println(new FuncGenerity().test1("du"));
+        System.out.println(new FuncGenerity().test1("du")); // 会根据参数自动确定泛型类型
+        new FuncGenerity().<String>test(); // 需要指定泛型类型
     }
 }
 
