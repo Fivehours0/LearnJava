@@ -26,6 +26,12 @@ class Person {
     private Person (String name) {
         this.name = name;
     }
+
+    public void resetParam (String name, int age) {
+        this.name = name;
+        this.age = age;
+        System.out.println("set success");
+    }
 }
 
 public class Reflection {
