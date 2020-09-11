@@ -32,7 +32,7 @@ public class CodePiece{
     }
 }
 
-class P73{
+class InnerClass{
 
     public static void main(String[] args) {
         // 匿名内部类，是codePiece的一个子类
@@ -47,9 +47,3 @@ class P73{
         };
     }
 }
-
-/**
- * final修饰的类不能被继承public final class 
- * final修饰的方法不能被重写
- * final修饰的变量是常量，必须进行赋值，只能赋值一次 final String NAME = ""; final static 全局常量
- */
