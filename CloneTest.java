@@ -51,7 +51,9 @@ class Person implements Cloneable {
     public static void main(String[] args) throws CloneNotSupportedException {
         Person p1 = new Person(1, "ball", "d", 18);
         Person p2 = (Person) p1.clone();
+        // return false; 在重写的clone中进行了深度拷贝
         System.out.println(p2.info.equals(p1.info));
+        System.out.println(p2.equals(p1)); // false
     }
 }
 
@@ -76,6 +78,7 @@ class BadPerson extends Person {
     public static void main(String[] args) throws CloneNotSupportedException {
         BadPerson b = new BadPerson(1, "a", "a", 18, 199);
         BadPerson b1 = (BadPerson) b.clone();
+        // return true; 默认是浅拷贝，没有对内部类InBadPerson进行深度拷贝
         System.out.println(b1.inBadPerson.equals(b.inBadPerson));
     }
 }
