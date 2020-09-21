@@ -14,7 +14,7 @@ enum Season{
     private final String NAME;
     private final String DESCRIBE;
 
-    private Season(String name, String describe){
+    Season(String name, String describe){
         this.NAME = name;
         this.DESCRIBE = describe;
     }
