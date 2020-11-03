@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--以xml配置文件方式实现对象创建与属性注入-->
+    <!--配置User对象的创建-->
+    <bean id="user" class="LearnSpring.demo.User">
+
+    <!--set方法注入属性
+        name: 类里面属性的名称
+        value: 向属性注入的值-->
+        <property name="name" value="DD"/>
+
+        <!--设置为null-->
+<!--        <property name="address">-->
+<!--            <null/>-->
+<!--        </property>-->
+
+        <!--当注入的属性值中有特殊符号时
+            1.使用xml的转义字符
+                &lt; < 小于号
+                &gt; > 大于号
+                &amp; & 和
+                &apos; ' 单引号
+                &quot; " 双引号
+            2.使用CDATA-->
+        <property name="address">
+            <value><![CDATA[<南京>]]></value>
+        </property>
+
+    </bean>
+
+    <!--以有参构造方式注入属性-->
+    <bean id="userConstructor" class="LearnSpring.demo.User">
+        <constructor-arg name="name" value="DDC"/>
+    </bean>
+
+</beans>
