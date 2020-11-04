@@ -3,15 +3,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!--外部注入：在一个类中调用另外一个类
-        步骤：1.创建两个类(例如Service和Dao), 2.在Service中调用Dao的方法-->
+    <!--外部注入-->
     <bean id="service" class="LearnSpring.OuterBean.Service">
         <!--注入dao对象
             name属性：Service类里面属性的名称
             ref属性：创建dao对象bean标签的id-->
         <property name="dao" ref="daoImpl"/>
     </bean>
-    <!--这里用的不是IDao，而是具体类Dao-->
+    <!--这里用的不是IDao，而是具体类Dao
+        外部类，相当于是普通的类，别的类都能看见它，这是与内部注入的内部类的区别-->
     <bean id="daoImpl" class="LearnSpring.OuterBean.Dao"/>
 
 </beans>

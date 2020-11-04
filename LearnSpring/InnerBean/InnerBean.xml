@@ -7,6 +7,7 @@
     <bean id="employee" class="LearnSpring.InnerBean.Employee">
         <property name="name" value="Lucy"/>
         <property name="department">
+            <!--相当于是内部类-->
             <bean class="LearnSpring.InnerBean.Department">
                 <property name="name" value="lab201"/>
             </bean>
