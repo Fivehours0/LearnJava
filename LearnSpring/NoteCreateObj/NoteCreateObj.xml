@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--开启组件扫描
+        1.如果扫描多个包，多个包使用逗号隔开
+        2.或者扫描包的上层目录
+        这里使用的是第二种方法，如果NoteCreateObj中有A包和B包则可以写成"LearnSpring.NoteCreateObj.A,LearnSpring.NoteCreateObj.B"-->
+    <context:component-scan base-package="LearnSpring.NoteCreateObj"/>
+
+    <!--组件扫描的详细配置
+        use-default-filters="false"表示不使用默认的filter，而使用自己配置的filter
+        context:include-filter 设置扫描哪些内容。expression表示只扫描带有Component类的注解-->
+
+<!--    <context:component-scan base-package="LearnSpring.NoteCreateObj" use-default-filters="false">-->
+<!--        <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>-->
+<!--    </context:component-scan>-->
+
+    <!--组件扫描的详细配置
+        exclude-filter 设置哪些内容不进行扫描-->
+
+<!--    <context:component-scan base-package="LearnSpring.NoteCreateObj">-->
+<!--        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Component"/>-->
+<!--    </context:component-scan>-->
+
+</beans>
