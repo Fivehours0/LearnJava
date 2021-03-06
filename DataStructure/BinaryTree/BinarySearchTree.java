@@ -147,6 +147,16 @@ public class BinarySearchTree {
         preOrder(root.right);
     }
 
+    public void inOrder(Node root) {
+        // 中序遍历输出的序列即为有序序列，调换inOrder(root.right)和inOrder(root.left)的位置，可以得到升序和降序序列
+        if (root == null) {
+            return;
+        }
+        inOrder(root.right);
+        System.out.print(root.data + " ");
+        inOrder(root.left);
+    }
+
     public static void main(String[] args) {
         BinarySearchTree tree=new BinarySearchTree();
 
@@ -154,7 +164,7 @@ public class BinarySearchTree {
             tree.insert(value);
         }
         tree.delete(64);
-        tree.preOrder(tree.root);
+        tree.inOrder(tree.root);
         Node findNode = tree.find(30);
         tree.show(findNode);
     }
