@@ -7,7 +7,7 @@ public class ByteCodeTest {
         static {
             A = 2;
         }
-
+ 
         private int test = 1;
     }
 

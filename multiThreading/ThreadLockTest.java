@@ -13,7 +13,7 @@ public class ThreadLockTest implements Callable<Long> {
     private static final int threadCOUNT = 4;
     private static final ExecutorService es = Executors.newFixedThreadPool(threadCOUNT);
 
-    private final ThreadLocal<Random> tl = new ThreadLocal<>() {
+    private final ThreadLocal<Random> tl = new ThreadLocal<Random>() {
         @Override
         protected Random initialValue() {
             return new Random(123);
