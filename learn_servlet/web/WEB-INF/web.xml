@@ -51,5 +51,14 @@
         <url-pattern>/hello2</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>GetRequireParam</servlet-name>
+        <servlet-class>GetRequireParam</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetRequireParam</servlet-name>
+        <url-pattern>/get_require_param</url-pattern>
+    </servlet-mapping>
 
 </web-app>
