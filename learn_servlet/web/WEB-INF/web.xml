@@ -81,4 +81,24 @@
         <url-pattern>/servlet2</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>Responds</servlet-name>
+        <servlet-class>re_location.Responds</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Responds</servlet-name>
+        <url-pattern>/responds</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Responds2</servlet-name>
+        <servlet-class>re_location.Responds2</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Responds2</servlet-name>
+        <url-pattern>/responds2</url-pattern>
+    </servlet-mapping>
+
 </web-app>
