@@ -61,4 +61,24 @@
         <url-pattern>/get_require_param</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>RelayServlet1</servlet-name>
+        <servlet-class>relay.Servlet1</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RelayServlet1</servlet-name>
+        <url-pattern>/servlet1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RelayServlet2</servlet-name>
+        <servlet-class>relay.Servlet2</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RelayServlet2</servlet-name>
+        <url-pattern>/servlet2</url-pattern>
+    </servlet-mapping>
+
 </web-app>
