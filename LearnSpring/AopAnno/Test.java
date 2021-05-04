@@ -1,7 +1,8 @@
-package LearnSpring.AopAnno;
+package AopAnno;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
+
 
 public class Test {
     @org.junit.Test

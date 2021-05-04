@@ -1,4 +1,4 @@
-package LearnSpring.OuterBean;
+package OuterBean;
 
 public class Service {
     private Dao dao;

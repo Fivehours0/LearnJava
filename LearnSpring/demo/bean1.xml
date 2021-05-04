@@ -5,7 +5,7 @@
 
     <!--以xml配置文件方式实现对象创建与属性注入-->
     <!--配置User对象的创建-->
-    <bean id="user" class="LearnSpring.demo.User">
+    <bean id="user" class="demo.User">
 
     <!--set方法注入属性
         name: 类里面属性的名称
@@ -32,7 +32,7 @@
     </bean>
 
     <!--以有参构造方式注入属性-->
-    <bean id="userConstructor" class="LearnSpring.demo.User">
+    <bean id="userConstructor" class="demo.User">
         <constructor-arg name="name" value="DDC"/>
     </bean>
 

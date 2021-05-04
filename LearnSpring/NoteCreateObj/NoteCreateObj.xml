@@ -8,7 +8,7 @@
         1.如果扫描多个包，多个包使用逗号隔开
         2.或者扫描包的上层目录
         这里使用的是第二种方法，如果NoteCreateObj中有A包和B包则可以写成"LearnSpring.NoteCreateObj.A,LearnSpring.NoteCreateObj.B"-->
-    <context:component-scan base-package="LearnSpring.NoteCreateObj"/>
+    <context:component-scan base-package="NoteCreateObj"/>
 
     <!--组件扫描的详细配置
         use-default-filters="false"表示不使用默认的filter，而使用自己配置的filter

@@ -1,5 +1,4 @@
-package LearnSpring.AopAnno;
-
+package AopAnno;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -13,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class Advisor {
 
     // 抽取相同的切入点，如果需要改execution的表达式，只需要改这一个地方就可以了
-    @Pointcut(value = "execution(* LearnSpring.AopAnno.User.add(..))")
+    @Pointcut(value = "execution(* AopAnno.User.add(..))")
     public void addPoint() {}
 
     // 前置通知
@@ -23,19 +22,19 @@ public class Advisor {
     }
 
     // 后置通知
-    @AfterReturning(value = "execution(* LearnSpring.AopAnno.User.add(..))")
+    @AfterReturning(value = "execution(* AopAnno.User.add(..))")
     public void afterReturning() {
         System.out.println("afterReturning。。。。。。。。。。。。");
     }
 
     // 最终通知 与后置通知的区别：当发生异常时，他仍然会发送通知，而AfterReturning不会
-    @After(value = "execution(* LearnSpring.AopAnno.User.add(..))")
+    @After(value = "execution(* AopAnno.User.add(..))")
     public void after() {
         System.out.println("after最终通知。。。。。。。。。。。。");
     }
 
     // 环绕通知
-    @Around(value = "execution(* LearnSpring.AopAnno.User.add(..))")
+    @Around(value = "execution(* AopAnno.User.add(..))")
     public void around(ProceedingJoinPoint jp) throws Throwable {
         System.out.println("around before。。。。。。。。。。。。");
         jp.proceed();
@@ -43,7 +42,7 @@ public class Advisor {
     }
 
     // 异常通知
-    @AfterThrowing(value = "execution(* LearnSpring.AopAnno.User.add(..))")
+    @AfterThrowing(value = "execution(* AopAnno.User.add(..))")
     public void afterThrowing() {
         System.out.println("afterThrowing。。。。。。。。。。。。");
     }

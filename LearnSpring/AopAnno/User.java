@@ -1,4 +1,4 @@
-package LearnSpring.AopAnno;
+package AopAnno;
 
 import org.springframework.stereotype.Component;
 

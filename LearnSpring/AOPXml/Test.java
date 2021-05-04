@@ -1,4 +1,4 @@
-package LearnSpring.AOPXml;
+package AOPXml;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;

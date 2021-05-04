@@ -1,4 +1,4 @@
-package LearnSpring.OuterProperty;
+package OuterProperty;
 
 public class Book {
     String name;

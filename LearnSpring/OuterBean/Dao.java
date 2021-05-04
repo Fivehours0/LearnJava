@@ -1,4 +1,4 @@
-package LearnSpring.OuterBean;
+package OuterBean;
 
 class Dao implements IDao {
 

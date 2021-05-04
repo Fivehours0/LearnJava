@@ -1,4 +1,4 @@
-package LearnSpring.DICollection;
+package DICollection;
 
 import java.util.Arrays;
 import java.util.List;

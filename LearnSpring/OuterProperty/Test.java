@@ -1,4 +1,4 @@
-package LearnSpring.OuterProperty;
+package OuterProperty;
 
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 

@@ -1,4 +1,4 @@
-package LearnSpring.AutoWrite;
+package AutoWrite;
 
 public class Stu {
     Course course;

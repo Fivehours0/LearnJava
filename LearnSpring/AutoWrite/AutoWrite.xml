@@ -8,9 +8,9 @@
         autowrite属性常用两个值：byName根据属性的名称(例如下面bean的id为course，stu中属性名称也是course)，byType根据属性的类别
         在Spring XML配置文件里的自动装配并不推荐使用，其中笔者认为最大的缺点在于不确定性。或者除非你对整个Spring应用中的所有Bean的情况了如指掌，
         不然随着Bean的增多和关系复杂度的上升，情况可能会很糟糕-->
-    <bean id="stu" class="LearnSpring.AutoWrite.Stu" autowire="byName"/>
+    <bean id="stu" class="AutoWrite.Stu" autowire="byName"/>
 
-    <bean id="course" class="LearnSpring.AutoWrite.Course">
+    <bean id="course" class="AutoWrite.Course">
         <property name="name" value="java class"/>
     </bean>
 </beans>

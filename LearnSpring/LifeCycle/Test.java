@@ -1,4 +1,4 @@
-package LearnSpring.LifeCycle;
+package LifeCycle;
 
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 

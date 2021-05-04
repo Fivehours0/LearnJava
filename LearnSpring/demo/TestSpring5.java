@@ -1,4 +1,4 @@
-package LearnSpring.demo;
+package demo;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;

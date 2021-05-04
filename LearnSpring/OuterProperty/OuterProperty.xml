@@ -5,9 +5,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="LearnSpring/OuterProperty/message.properties"/>
+    <context:property-placeholder location="OuterProperty/message.properties"/>
 
-    <bean id="book" class="LearnSpring.OuterProperty.Book">
+    <bean id="book" class="OuterProperty.Book">
         <property name="name" value="${book.name}"/>
         <property name="ID" value="${book.ID}"/>
     </bean>

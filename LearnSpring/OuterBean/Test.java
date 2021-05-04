@@ -1,4 +1,4 @@
-package LearnSpring.OuterBean;
+package OuterBean;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;

@@ -1,4 +1,4 @@
-package LearnSpring.InnerBean;
+package InnerBean;
 
 public class Department {
     private String name;

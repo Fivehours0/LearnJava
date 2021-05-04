@@ -1,4 +1,4 @@
-package LearnSpring.LifeCycle;
+package LifeCycle;
 
 public class Order {
     String name;

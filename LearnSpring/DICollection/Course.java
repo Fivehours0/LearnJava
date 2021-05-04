@@ -1,4 +1,4 @@
-package LearnSpring.DICollection;
+package DICollection;
 
 public class Course {
     private String name;

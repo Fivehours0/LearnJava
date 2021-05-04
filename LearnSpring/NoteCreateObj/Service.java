@@ -1,4 +1,4 @@
-package LearnSpring.NoteCreateObj;
+package NoteCreateObj;
 
 import org.springframework.stereotype.Component;
 

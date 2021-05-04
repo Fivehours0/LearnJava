@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="stu" class="LearnSpring.DICollection.Stu">
+    <bean id="stu" class="DICollection.Stu">
         <!--注入数组-->
         <property name="course">
             <array>
@@ -40,11 +40,11 @@
         <property name="courseList">
             <array>
                 <!--注入的第一个类-->
-                <bean class="LearnSpring.DICollection.Course">
+                <bean class="DICollection.Course">
                     <property name="name" value="java class"/>
                 </bean>
                 <!--注入的第二个类-->
-                <bean class="LearnSpring.DICollection.Course">
+                <bean class="DICollection.Course">
                     <property name="name" value="data structure"/>
                 </bean>
 

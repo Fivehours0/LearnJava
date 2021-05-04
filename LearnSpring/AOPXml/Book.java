@@ -1,4 +1,4 @@
-package LearnSpring.AOPXml;
+package AOPXml;
 
 public class Book {
     public void buy() {
