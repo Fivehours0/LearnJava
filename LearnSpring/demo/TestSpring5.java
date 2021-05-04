@@ -8,7 +8,7 @@ public class TestSpring5 {
     @Test
     public void testAdd() {
         // 加载Spring的配置文件
-        ApplicationContext context = new FileSystemXmlApplicationContext("LearnSpring/demo/bean1.xml");
+        ApplicationContext context = new FileSystemXmlApplicationContext("demo/bean1.xml");
 
         // 获取配置里的对象
         User user = context.getBean("user", User.class);

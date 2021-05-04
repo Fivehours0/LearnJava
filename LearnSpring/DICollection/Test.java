@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class Test {
     @org.junit.Test
     public void test() {
-        ApplicationContext context = new FileSystemXmlApplicationContext("LearnSpring/DICollection/CollectionBean.xml");
+        ApplicationContext context = new FileSystemXmlApplicationContext("DICollection/CollectionBean.xml");
 
         Stu stu = context.getBean("stu", Stu.class);
 
@@ -17,7 +17,7 @@ public class Test {
 
     @org.junit.Test
     public void publicBean() {
-        ApplicationContext context = new FileSystemXmlApplicationContext("LearnSpring/DICollection/publicBean.xml");
+        ApplicationContext context = new FileSystemXmlApplicationContext("DICollection/publicBean.xml");
 
         Stu stu = context.getBean("stu", Stu.class);
 

@@ -6,7 +6,7 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
 public class Test {
     @org.junit.Test
     public void testInnerBean() {
-        ApplicationContext context = new FileSystemXmlApplicationContext("LearnSpring/InnerBean/InnerBean.xml");
+        ApplicationContext context = new FileSystemXmlApplicationContext("InnerBean/InnerBean.xml");
 
         Employee employee = context.getBean("employee", Employee.class);
 

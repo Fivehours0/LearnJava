@@ -7,7 +7,7 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
 public class Test {
     @org.junit.Test
     public void test() {
-        FileSystemXmlApplicationContext context = new FileSystemXmlApplicationContext("LearnSpring/NoteCreateObj/NoteCreateObj.xml");
+        FileSystemXmlApplicationContext context = new FileSystemXmlApplicationContext("NoteCreateObj/NoteCreateObj.xml");
         Girl girl = context.getBean("girl", Girl.class);
 
         girl.test();
