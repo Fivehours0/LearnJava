@@ -17,5 +17,26 @@
       <input type="submit" value="post请求other.do">
     </form>
     <p><a href="other.do"> 发起一个other.do的请求</a> </p>
+
+    <!--使用request接收-->
+    <form action="get_param.do" method="post">
+      姓名: <input type="text" name="msg"> <br/>
+      年龄: <input type="text" name="fun"> <br/>
+      <input type="submit" value="提交参数">
+    </form>
+
+    <!--逐个接收参数-->
+    <form action="get_param2.do" method="post">
+      姓名: <input type="text" name="msg"> <br/>
+      年龄: <input type="text" name="fun"> <br/>
+      <input type="submit" value="提交参数">
+    </form>
+
+    <!--使用java对象接收参数-->
+    <form action="get_param3.do" method="post">
+      姓名: <input type="text" name="msg"> <br/>
+      年龄: <input type="text" name="fun"> <br/>
+      <input type="submit" value="提交参数">
+    </form>
   </body>
 </html>
