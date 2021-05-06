@@ -15,5 +15,6 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <!--这里的hello指的是处理/hello的请求-->
     <bean name="/hello" class="hello_mvc.HelloController"/>
 </beans>

@@ -15,7 +15,7 @@ public class HelloController implements Controller {
         // 封装对象，放在ModelAndView中
         mv.addObject("msg", "HelloSpringMVC");
         // 封装要跳转的视图，放在ModelAndView中
-        //: /WEB_INF/jsp/hello.jsp    这里利用了web-inf中的前缀后缀，自动拼接出这样的一个地址
+        //: /WEB_INF/jsp/hello.jsp    这里利用了web-inf中的前缀后缀，自动拼接出这样的一个地址。这里的hello是将内容转发至hello.jsp
         mv.setViewName("hello");
         return mv;
     }
