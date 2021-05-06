@@ -5,20 +5,71 @@
          version="4.0">
     
     <!--注册DispatcherServlet-->
+    <!--声明：注册springmvc的核心对象DispatcherServlet
+
+        需要在tomcat服务器启动后，创建DispatcherServlet对象实例
+
+        为什么要创建DispatcherServlet对象的实例呢？
+        因为在DispatcherServlet创建过程中，会同时创建springmvc容器对象，
+        读取springmvc的配置文件，把这个配置文件中的对象都配置好，
+        当用户发起请求时就可以直接使用对象了。
+
+        servlet的初始化会执行init()方法，DispatcherServlet在init()中{
+            //创建容器，读取配置文件
+            webApplicationContext ctx = new ClassPathXmlApplicationContext("springmvc.xml");
+            //把容器对象放入到ServletContext中
+            getServletContext().setAttribute(key,ctx);
+         }
+    -->
     <servlet>
         <servlet-name>HelloController</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+
         <!--关联一个springmvc的配置文件,文件名: 名称-servlet.xml-->
+        <!--自定义springmvc读取文件的位置-->
         <init-param>
+            <!--springmvc配置文件的位置属性-->
             <param-name>contextConfigLocation</param-name>
+            <!--指定自定义文件的位置
+                classpath: 表示生成的target目录中的classes目录-->
             <param-value>classpath:springmvc-servlet.xml</param-value>
         </init-param>
+
         <!--启动级别1-->
-        <load-on-startup>1</load-on-startup>
+        <!--表示在tomcat启动后，创建servlet对象
+            数字表示启动后创建对象的顺序，数值越小，tomcat创建对象越早，要求大于等于0的整数
+        -->
     </servlet>
-    
+
     <servlet-mapping>
         <servlet-name>HelloController</servlet-name>
+        <!--
+                使用框架的时候，url-pattern可以使用两种值
+                1.使用扩展名方式，语法 *.xxxx , xxxx时自定义扩展名。常用的方式 *.do, *.action, *.mvc等等，表示以*.do, *.action, *.mvc
+                    结尾的请求都交给这个中央调度处理器处理
+                    http://localhost:8080/myweb/some.do
+                    http://localhost:8080?myweb/other.do
+                    <url-pattern>*.do</url-pattern>
+                2.使用斜杠"/"
+            -->
         <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>MyController</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:mycontroller-servlet.xml</param-value>
+        </init-param>
+
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MyController</servlet-name>
+        <url-pattern>*.do</url-pattern>
     </servlet-mapping>
 </web-app>

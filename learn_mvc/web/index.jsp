@@ -11,6 +11,11 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+    <p>这是一个springmvc的项目</p>
+    <p><a href="some.do"> 发起一个some.do的请求</a> </p>
+    <form action="other.do" method="post">
+      <input type="submit" value="post请求other.do">
+    </form>
+    <p><a href="other.do"> 发起一个other.do的请求</a> </p>
   </body>
 </html>
