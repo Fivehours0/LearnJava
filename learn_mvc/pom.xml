@@ -47,6 +47,18 @@
             <artifactId>commons-logging-api</artifactId>
             <version>1.1</version>
         </dependency>
+
+        <!--jackson依赖-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.0</version>
+        </dependency>
     </dependencies>
 
 </project>

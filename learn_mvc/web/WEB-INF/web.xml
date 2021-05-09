@@ -52,7 +52,7 @@
                     <url-pattern>*.do</url-pattern>
                 2.使用斜杠"/"
             -->
-        <url-pattern>/</url-pattern>
+        <url-pattern>/hello</url-pattern>
     </servlet-mapping>
 
 
