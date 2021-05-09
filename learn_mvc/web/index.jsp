@@ -83,5 +83,14 @@
 
     <br/>
     <button id="btn">发起一个ajax请求</button>
+
+    <p>访问静态资源</p>
+    <form action="static_resource.do" method="post">
+      姓名: <input type="text" name="msg"> <br/>
+      年龄: <input type="text" name="fun"> <br/>
+      <input type="submit" value="提交参数">
+    </form>
+
+    <img src="img/小埋.jpg" alt="这是一张静态图片，不能显示">
   </body>
 </html>

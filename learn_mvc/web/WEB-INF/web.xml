@@ -50,7 +50,14 @@
                     http://localhost:8080/myweb/some.do
                     http://localhost:8080?myweb/other.do
                     <url-pattern>*.do</url-pattern>
-                2.使用斜杠"/"
+                2.使用斜杠"/", 设置斜杠表示静态资源和未映射的请求都由这个default处理。他会替代tomcat当中的default
+                (位于tomcat的web.xml中)。导致所有的静态资源都给DispatcherServlet处理(tomcat中的default是能处理静态资源的)，
+                默认情况下DispatcherServlet没有处理静态资源的能力，所以静态资源（html, js, 图片, css）都是404
+
+                <servlet-mapping>
+                    <servlet-name>default</servlet-name>
+                    <url-pattern>/</url-pattern>
+                </servlet-mapping>
             -->
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
