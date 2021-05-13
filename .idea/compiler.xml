@@ -6,12 +6,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="learn_servlet" />
+        <module name="LearnSpring" />
+        <module name="learn_ssm" />
+        <module name="learn_mvc" />
         <module name="LearnJedis" />
+        <module name="trr" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="LearnJava" target="1.5" />
-      <module name="LearnJedis" target="1.5" />
+    <bytecodeTargetLevel target="8">
+      <module name="learn_mvc" target="6" />
+      <module name="learn_servlet" target="6" />
+      <module name="learn_spring" target="6" />
+      <module name="learn_ssm" target="6" />
+      <module name="LearnJava" target="6" />
+      <module name="LearnJedis" target="6" />
+      <module name="LearnSpring" target="6" />
+      <module name="trr" target="6" />
+      <module name="Trsr" target="6" />
     </bytecodeTargetLevel>
   </component>
 </project>
