@@ -13,11 +13,26 @@ n &= n-1 直接去掉二进制中位置最靠后的1
         最大优先队列，无论入队顺序，当前最大的元素优先出队。
         最小优先队列，无论入队顺序，当前最小的元素优先出队。
         遍历过程中需要大小
+        Queue<Integer> queue = new PriorityQueue<>();
+        queue.poll()
+        queue.add()
+
     有序集合：treeset
         有序集合内的数据是有序的，可以根据key移除元素。
         函数ceiling(value)挺重要的，得到大于或等于value的那个最小的数
         有时候需要用到有序数组，可以用ceiling方便的得到想要的数。例如力扣220
         本质是利用有序数组的二分法来优化
+        Set<Integer> set = new TreeSet<>();
+        set.add()
+        set.first()
+
+        set.ceiling
+        Returns the least key greater than or equal to the given key,
+             * or {@code null} if there is no such key.
+
+        set.higher()
+        Returns the least key strictly greater than the given key, or
+             * {@code null} if there is no such key.
 
     回溯算法
 
@@ -30,6 +45,8 @@ n &= n-1 直接去掉二进制中位置最靠后的1
     栈结构
         单调栈：
         翻转
+        对于逆序处理应该首先想到栈
+
     队列结构
 
     接雨水的题:
@@ -46,6 +63,13 @@ n &= n-1 直接去掉二进制中位置最靠后的1
 
 可以用一个数组保存出现的次数，比如字母的次数，只有26的字母，所以只需要26位大小的数组即可
 还可以通过32位的数组保存数字的位关系，比如除某个元素仅出现 一次 外，其余每个元素都恰出现 三次 。这样出现3次的数字对应的位就能整除3 （137题）
+
+二叉搜索树：
+    中序遍历为升序
+
+
+前缀树：
+    使用树结构，按照一定的方式保存数据，在下次遍历的时候可以使用(421题)
 
 
 HashMap常用的函数
@@ -67,3 +91,11 @@ HashMap常用的函数
     			    }
                 }
             });
+
+合并数组
+    private int[] merge(int[] a, int[] b) {
+            int[] c= new int[a.length+b.length];
+            System.arraycopy(a, 0, c, 0, a.length);
+            System.arraycopy(b, 0, c, a.length, b.length);
+            return c;
+        }
