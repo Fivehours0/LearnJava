@@ -43,7 +43,7 @@ public class Reflection {
         // 常用方法, method 3: Class类的类方法forName("包名.类名")
         try {
             // 有在className是类名或接口名时才能够执行。否则， forName方法将抛出一个checked exception（已检查异常）。
-            String className = "Reflection.Person";
+            String className = "java_basic.Reflection.Person";
             Class<?> clazz3 = Class.forName(className);
             // 获取Person类继承的接口
             Class<?>[] personInterface = clazz3.getInterfaces();

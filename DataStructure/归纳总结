@@ -1,5 +1,14 @@
 n &= n-1 直接去掉二进制中位置最靠后的1
 
+最长连续子数组类型的题目可以试试前缀和的方式     525   523
+还有一种思路是滑动窗口 209
+
+求子区间，子串一类的题可以使用滑动窗口
+
+private static final Random RANDOM = new Random();
+int randomIndex = left + RANDOM.nextInt(right - left + 1);
+
+回溯算法记住：也可以归类为选与不选
 
 常使用的算法:
     链表:
@@ -13,6 +22,7 @@ n &= n-1 直接去掉二进制中位置最靠后的1
         最大优先队列，无论入队顺序，当前最大的元素优先出队。
         最小优先队列，无论入队顺序，当前最小的元素优先出队。
         遍历过程中需要大小
+        涉及最大最小值的
         Queue<Integer> queue = new PriorityQueue<>();
         queue.poll()
         queue.add()
