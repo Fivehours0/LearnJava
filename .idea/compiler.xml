@@ -7,14 +7,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="learn_servlet" />
-        <module name="LearnSpring" />
         <module name="learn_ssm" />
+        <module name="provider" />
+        <module name="gmail-interface" />
         <module name="learn_mvc" />
+        <module name="LearnSpring" />
         <module name="LearnJedis" />
+        <module name="learn_dubbo" />
+        <module name="consumer" />
         <module name="trr" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
+      <module name="consumer" target="6" />
+      <module name="gmail-interface" target="6" />
+      <module name="learn_dubbo" target="6" />
       <module name="learn_mvc" target="6" />
       <module name="learn_servlet" target="6" />
       <module name="learn_spring" target="6" />
@@ -22,6 +29,7 @@
       <module name="LearnJava" target="6" />
       <module name="LearnJedis" target="6" />
       <module name="LearnSpring" target="6" />
+      <module name="provider" target="6" />
       <module name="trr" target="6" />
       <module name="Trsr" target="6" />
     </bytecodeTargetLevel>

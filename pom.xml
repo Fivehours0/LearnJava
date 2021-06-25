@@ -24,6 +24,8 @@
         <module>LearnJedis</module>
         <module>learn_servlet</module>
         <module>learn_mvc</module>
+        <module>learn_dubbo</module>
+        <module>learn_dubbo</module>
     </modules>
 
     <dependencies>

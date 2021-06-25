@@ -9,6 +9,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/LearnSpring/pom.xml" />
         <option value="$PROJECT_DIR$/learn_ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/learn_dubbo/pom.xml" />
+        <option value="$PROJECT_DIR$/learn_dubbo/consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/learn_dubbo/gmail-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/learn_dubbo/provider/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

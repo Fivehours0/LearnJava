@@ -5,9 +5,13 @@
       <module fileurl="file://$PROJECT_DIR$/test.iml" filepath="$PROJECT_DIR$/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/LearnJedis/LearnJedis.iml" filepath="$PROJECT_DIR$/LearnJedis/LearnJedis.iml" />
       <module fileurl="file://$PROJECT_DIR$/LearnSpring/LearnSpring.iml" filepath="$PROJECT_DIR$/LearnSpring/LearnSpring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learn_dubbo/consumer/consumer.iml" filepath="$PROJECT_DIR$/learn_dubbo/consumer/consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learn_dubbo/gmail-interface/gmail-interface.iml" filepath="$PROJECT_DIR$/learn_dubbo/gmail-interface/gmail-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learn_dubbo/learn_dubbo.iml" filepath="$PROJECT_DIR$/learn_dubbo/learn_dubbo.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn_mvc/learn_mvc.iml" filepath="$PROJECT_DIR$/learn_mvc/learn_mvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn_servlet/learn_servlet.iml" filepath="$PROJECT_DIR$/learn_servlet/learn_servlet.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn_ssm/learn_ssm.iml" filepath="$PROJECT_DIR$/learn_ssm/learn_ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learn_dubbo/provider/provider.iml" filepath="$PROJECT_DIR$/learn_dubbo/provider/provider.iml" />
     </modules>
   </component>
 </project>
