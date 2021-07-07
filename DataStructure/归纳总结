@@ -9,6 +9,7 @@ private static final Random RANDOM = new Random();
 int randomIndex = left + RANDOM.nextInt(right - left + 1);
 
 回溯算法记住：也可以归类为选与不选
+bfs, dfs 可以考虑树的深度
 
 常使用的算法:
     链表:
@@ -109,3 +110,17 @@ HashMap常用的函数
             System.arraycopy(b, 0, c, a.length, b.length);
             return c;
         }
+
+快排的基本形式：
+    Random random = new Random();
+    int pos = start + random.nextInt(end - start);
+    int base = arr[pos];
+    swap(arr, start, pos);
+    int left = start+1;
+    for (int j = start+1; j < end; j++) {
+        if (arr[j] < base) {
+            swap(arr, j, left);
+            left++;
+        }
+    }
+    swap(arr, left-1, start);
