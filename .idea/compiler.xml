@@ -19,19 +19,20 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="consumer" target="6" />
-      <module name="gmail-interface" target="6" />
-      <module name="learn_dubbo" target="6" />
-      <module name="learn_mvc" target="6" />
-      <module name="learn_servlet" target="6" />
-      <module name="learn_spring" target="6" />
-      <module name="learn_ssm" target="6" />
-      <module name="LearnJava" target="6" />
-      <module name="LearnJedis" target="6" />
-      <module name="LearnSpring" target="6" />
-      <module name="provider" target="6" />
-      <module name="trr" target="6" />
-      <module name="Trsr" target="6" />
+      <module name="consumer" target="8" />
+      <module name="gmail-interface" target="8" />
+      <module name="learn_dubbo" target="8" />
+      <module name="learn_mvc" target="8" />
+      <module name="learn_servlet" target="8" />
+      <module name="learn_spring" target="8" />
+      <module name="learn_ssm" target="8" />
+      <module name="LearnJava" target="8" />
+      <module name="LearnJedis" target="8" />
+      <module name="LearnSpring" target="8" />
+      <module name="provider" target="8" />
+      <module name="test" target="8" />
+      <module name="trr" target="8" />
+      <module name="Trsr" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

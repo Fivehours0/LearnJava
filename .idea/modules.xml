@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/test.iml" filepath="$PROJECT_DIR$/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/LearnJedis/LearnJedis.iml" filepath="$PROJECT_DIR$/LearnJedis/LearnJedis.iml" />
       <module fileurl="file://$PROJECT_DIR$/LearnSpring/LearnSpring.iml" filepath="$PROJECT_DIR$/LearnSpring/LearnSpring.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn_dubbo/consumer/consumer.iml" filepath="$PROJECT_DIR$/learn_dubbo/consumer/consumer.iml" />
@@ -12,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/learn_servlet/learn_servlet.iml" filepath="$PROJECT_DIR$/learn_servlet/learn_servlet.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn_ssm/learn_ssm.iml" filepath="$PROJECT_DIR$/learn_ssm/learn_ssm.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn_dubbo/provider/provider.iml" filepath="$PROJECT_DIR$/learn_dubbo/provider/provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test.iml" filepath="$PROJECT_DIR$/test.iml" />
     </modules>
   </component>
 </project>
