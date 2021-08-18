@@ -9,13 +9,14 @@
         <module name="learn_servlet" />
         <module name="learn_ssm" />
         <module name="provider" />
-        <module name="gmail-interface" />
+        <module name="learn_rocketmq" />
         <module name="learn_mvc" />
         <module name="LearnSpring" />
         <module name="LearnJedis" />
         <module name="learn_dubbo" />
-        <module name="consumer" />
         <module name="trr" />
+        <module name="consumer" />
+        <module name="gmail-interface" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
@@ -23,6 +24,7 @@
       <module name="gmail-interface" target="8" />
       <module name="learn_dubbo" target="8" />
       <module name="learn_mvc" target="8" />
+      <module name="learn_rocketmq" target="8" />
       <module name="learn_servlet" target="8" />
       <module name="learn_spring" target="8" />
       <module name="learn_ssm" target="8" />

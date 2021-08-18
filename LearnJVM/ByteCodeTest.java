@@ -22,6 +22,7 @@ public class ByteCodeTest {
     // linking之prepare: number -> 0 ---> initial 2 -> 10(覆盖2)
     private static int number = 10;
     private int a = 8;
+    private static Father f = new Father();
     public static void main(String[] args) {
         Father father = new Father();
         int aa = 0;

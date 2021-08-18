@@ -1,8 +1,9 @@
 package multiThreading;
 
 public class ThreadLocalTest implements Runnable {
-    private ThreadLocal<String> tl = new ThreadLocal<>();
-
+    // 申明为类变量还是挺重要的，这样同一个线程内部使用同一个tl
+    // 因为ThreadLocal是存在线程持有的map中的，每个线程都有一个，所以互相不冲突
+    final static ThreadLocal<String> tl = new ThreadLocal<>();
     @Override
     public void run() {
         // 对每个线程设置独有的content变量
