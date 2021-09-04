@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/learn_rocketmq/learn_rocketmq.iml" filepath="$PROJECT_DIR$/learn_rocketmq/learn_rocketmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn_servlet/learn_servlet.iml" filepath="$PROJECT_DIR$/learn_servlet/learn_servlet.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn_ssm/learn_ssm.iml" filepath="$PROJECT_DIR$/learn_ssm/learn_ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learn_zookeeper/learn_zookeeper.iml" filepath="$PROJECT_DIR$/learn_zookeeper/learn_zookeeper.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn_dubbo/provider/provider.iml" filepath="$PROJECT_DIR$/learn_dubbo/provider/provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/test.iml" filepath="$PROJECT_DIR$/test.iml" />
     </modules>

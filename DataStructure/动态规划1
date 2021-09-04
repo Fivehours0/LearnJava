@@ -24,3 +24,8 @@ dp[i][j][k]表示前 i 辆车中派出 j 辆到A地，派出 k 辆到B地可以�
 
 dp[i][j][k] = Math.max(dp[i - 1][j][k], 
     Math.max(dp[i - 1][j - 1][k] + profits[i][0], dp[i - 1][j][k - 1] + profits[i][1]));
+
+求最大公因数
+int gcd_1(int a, int b){
+    return b == 0 ? a:gcd_1(b, a%b);
+}
