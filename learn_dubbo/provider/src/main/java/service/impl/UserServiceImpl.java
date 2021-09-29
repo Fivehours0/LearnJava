@@ -8,6 +8,11 @@ import service.UserService;
 
 public class UserServiceImpl implements UserService {
 
+	/**
+	 * 实现了服务接口，根据用户的id，返回用户的信息，这里模拟数据库的操作，直接返回了两条数据
+	 * @param userId
+	 * @return
+	 */
 	@Override
 	public List<UserAddress> getUserAddressList(String userId) {
 		System.out.println("UserServiceImpl.....old...");

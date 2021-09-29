@@ -5,7 +5,7 @@ import bean.UserAddress;
 import java.util.List;
 
 /**
- * 用户服务
+ * 用户服务，提供服务的接口
  * @author lfy
  *
  */

@@ -6,28 +6,31 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="learn_zookeeper" />
+        <module name="gmail-interface" />
+        <module name="LearnSpring" />
+        <module name="provider" />
+        <module name="learn_dubbo" />
+        <module name="learn_mvc" />
+        <module name="LearnJedis" />
+        <module name="learn_es" />
+        <module name="trr" />
+        <module name="consumer" />
         <module name="learn_servlet" />
         <module name="learn_ssm" />
         <module name="learn_rocketmq" />
-        <module name="gmail-interface" />
-        <module name="learn_mvc" />
-        <module name="LearnSpring" />
-        <module name="LearnJedis" />
-        <module name="provider" />
-        <module name="learn_dubbo" />
-        <module name="learn_zookeeper" />
-        <module name="consumer" />
-        <module name="trr" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="consumer" target="8" />
       <module name="gmail-interface" target="8" />
       <module name="learn_dubbo" target="8" />
+      <module name="learn_es" target="8" />
       <module name="learn_mvc" target="8" />
       <module name="learn_rocketmq" target="8" />
       <module name="learn_servlet" target="8" />
       <module name="learn_spring" target="8" />
+      <module name="learn_spring_boot" target="8" />
       <module name="learn_ssm" target="8" />
       <module name="learn_zookeeper" target="8" />
       <module name="LearnJava" target="8" />

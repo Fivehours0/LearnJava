@@ -3,13 +3,13 @@ package service.impl;
 import dao.UserDao;
 import domain.User;
 import org.springframework.stereotype.Service;
-import service.UserService;
+import service.UserServiceSSM;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl implements UserServiceSSM {
 
     @Resource
     private UserDao userDao;

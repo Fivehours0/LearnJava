@@ -4,7 +4,7 @@ import domain.User;
 
 import java.util.List;
 
-public interface UserService {
+public interface UserServiceSSM {
     int insertUser(User user);
     List<User> selectUsers();
 }

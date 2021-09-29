@@ -3,7 +3,7 @@ package bean;
 import java.io.Serializable;
 
 /**
- * 用户地址
+ * 用户地址,DAO类
  * @author lfy
  *
  */

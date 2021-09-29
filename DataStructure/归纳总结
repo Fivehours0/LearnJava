@@ -101,6 +101,9 @@ version1.split("\\.");
         set.add()
         set.first()
 
+        map.descendingKeySet();
+        set.descendingSet();
+
         set.ceiling
         Returns the least key greater than or equal to the given key,
              * or {@code null} if there is no such key.

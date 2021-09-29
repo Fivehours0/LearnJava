@@ -28,6 +28,7 @@
         <module>learn_dubbo</module>
         <module>learn_rocketmq</module>
         <module>learn_zookeeper</module>
+        <module>learn_es</module>
     </modules>
 
     <dependencies>

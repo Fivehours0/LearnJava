@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-import service.UserService;
+import service.UserServiceSSM;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.List;
 public class UserController {
 
     @Resource
-    private UserService userService;
+    private UserServiceSSM userService;
 
     @RequestMapping(value = "/addUser.do")
     public ModelAndView addUser(User user) {
