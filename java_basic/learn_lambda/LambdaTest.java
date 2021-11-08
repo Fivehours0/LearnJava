@@ -13,6 +13,11 @@ public class LambdaTest {
         return ans;
     }
 
+    // 方法引用
+    public static boolean methodReference(int i) {
+        return i < 9;
+    }
+
     // 无参数无返回值：类似 ()->System.out.println("hello")
     // 有参数无返回值：类似 (x)->System.out.println(x)，x是随便起的参数名称，函数的功能是打印x
     // 两个参数，多条语句 (x, y) -> {
@@ -31,6 +36,7 @@ public class LambdaTest {
             i = i * 2;
             return i > 2;
         }));
+        System.out.println(filterArray(list, LambdaTest::methodReference));
         // 只有一条语句，花括号和return都可以省略不写
         System.out.println(filterArray(list, (i) -> i > 2));
     }
