@@ -1,5 +1,67 @@
+题目抽象：本质是将题目中的一个个参数抽象成一个个变量
+
+递归转迭代，其实可以看作是dfs转bfs
+
 n &= n-1 直接去掉二进制中位置最靠后的1
 
+背包问题 （322零钱兑换）
+    注意初始值
+    1、0/1背包：外循环nums,内循环target,target倒序且target>=nums[i];
+    2、完全背包：外循环nums,内循环target,target正序且target>=nums[i];
+    class Solution {
+        public int coinChange(int[] coins, int amount) {
+            int n = coins.length;
+            int max = amount+1;
+            int[][] dp = new int[n+1][amount+1];
+            for (int i = 0; i <= n; i++) {
+                Arrays.fill(dp[i], max);
+                dp[i][0] = 0;
+            }
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= amount; j++) {
+                    if (coins[i-1] <= j) {
+                        dp[i][j] = Math.min(dp[i-1][j], dp[i][j-coins[i-1]] + 1);
+                    } else {
+                        dp[i][j] = dp[i-1][j];
+                    }
+                }
+            }
+            // System.out.println(Arrays.deepToString(dp));
+            return dp[n][amount] == max ? -1 : dp[n][amount];
+        }
+    }
+    3、组合背包：外循环nums,内循环target,target正序且target>=nums[i];
+            int n = coins.length;
+            int[][] dp = new int[n+1][amount+1];
+            for (int i = 0; i < n+1; i++) {
+                dp[i][0] = 1;
+            }
+            for (int i = 1; i < n+1; i++) {
+                for (int j = 1; j < amount+1; j++) {
+                    dp[i][j] += dp[i-1][j];
+                    if (j - coins[i-1] >= 0) {
+                        dp[i][j] += dp[i][j-coins[i-1]];
+                    }
+                }
+            }
+            return dp[n][amount];
+    4、排列背包：外循环target,内循环nums,target正序且target>=nums[i];
+
+    1、最值问题: dp[i] = max/min(dp[i], dp[i-nums]+1)或dp[i] = max/min(dp[i], dp[i-num]+nums);
+        二维dp中，01背包和完全背包的区别
+            01背包：dp[i][j] = Math.min(dp[i-1][j], dp[i-1][j-coins[i-1]] + 1);
+            完全背包：dp[i][j] = Math.min(dp[i-1][j], dp[i][j-coins[i-1]] + 1);
+    2、存在问题(bool)：dp[i]=dp[i]||dp[i-num];
+    3、组合问题：dp[i]+=dp[i-num];
+
+
+Character.isLowerCase()
+Character.isUpperCase();
+Character.isLetter();
+Character.isDigit();
+
+
+深度搜索+减枝（322零钱兑换）
 最长连续子数组类型的题目可以试试前缀和的方式     525   523
 还有一种思路是滑动窗口 209
 
@@ -125,6 +187,12 @@ version1.split("\\.");
         翻转
         对于逆序处理应该首先想到栈
 
+        Deque<Integer> stack = new ArrayDeque<Integer>();
+        stack.pollLast();
+        stack.offerFirst();
+        stack.removeLast();
+        stack.addFirst();
+
     队列结构
 
     接雨水的题:
@@ -217,4 +285,68 @@ private static int gcd(int a, int b) {
         return a;
     }
     return gcd(b, a % b);
+}
+
+滑动窗口的基本写法：如果可以则while一直往右滑动，并且不满足条件的时候，save进行移除，即相当于是左指针进行滑动
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        Set<Character> save = new HashSet<>();
+        int right = -1, left = -1;
+        int ans = 0;
+        for (int i = 0; i < s.length(); i++) {
+            char curr = s.charAt(i);
+            if (i != 0) {
+                save.remove(s.charAt(i-1));
+            }
+            while (right+1 < s.length() && !save.contains(s.charAt(right+1))) {
+                save.add(s.charAt(right+1));
+                right++;
+            }
+            ans = Math.max(right-i+1, ans);
+        }
+        return ans;
+    }
+}
+
+
+
+组合的基本写法：
+0    a       b       c
+1  d e f    d e f   d e f
+ index 相当于层，位于第0层，第1层
+ 里面的for循环，则是层内的循环，比如第0层的abc循环，第1层a下的def循环
+
+
+class Solution {
+    Map<Character, String> save = new HashMap<>(){{
+        put('2', "abc");
+        put('3', "def");
+        put('4', "ghi");
+        put('5', "jkl");
+        put('6', "mno");
+        put('7', "pqrs");
+        put('8', "tuv");
+        put('9', "wxyz");
+    }};
+
+    private List<String> ans = new ArrayList<>();
+
+    private void letterCombinations(String digits, int index, String last) {
+        if (index == digits.length()) {
+            ans.add(last);
+            return;
+        }
+        String curr = save.get(digits.charAt(index));
+        for (int i = 0; i < curr.length(); i++) {
+            letterCombinations(digits, index+1, last+curr.substring(i, i+1));
+        }
+    }
+
+    public List<String> letterCombinations(String digits) {
+        if ("".equals(digits)) {
+            return ans;
+        }
+        letterCombinations(digits, 0, "");
+        return ans;
+    }
 }

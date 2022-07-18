@@ -6,7 +6,6 @@ public class Demo {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         // 加载驱动
         Class.forName("com.mysql.cj.jdbc.Driver");
-
         // 建立连接  Connection conn = DriverManager.getConnection(url,user,pass);
         Connection conn = null;
         String url = "jdbc:mysql://localhost:3306/test?serverTimezone=UTC";
@@ -31,6 +30,7 @@ public class Demo {
 
 
         //6.关闭链接，释放资源
+        // 最好用try catch包起来，然后这些放在finally里边
         if(rs!=null){
             try{
                 rs.close();
